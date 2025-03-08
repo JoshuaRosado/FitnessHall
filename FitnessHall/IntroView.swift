@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IntroView: View {
+    @State private var onAppear = false
     var body: some View {
         ZStack{
             (Color("Space"))
@@ -26,6 +27,14 @@ struct IntroView: View {
             }
             .foregroundStyle(.white)
             
+        }
+        // on Appear effect tracking it with (onAppear : Bool)
+        .scaleEffect(onAppear ? 1: 1.5)
+        .opacity(onAppear ? 1.0: 0.0)
+        .onAppear{
+            withAnimation(.easeInOut(duration: 1.0)){
+                onAppear = true
+            }
         }
        
     }
