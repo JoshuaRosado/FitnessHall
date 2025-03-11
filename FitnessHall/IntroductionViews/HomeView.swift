@@ -18,7 +18,22 @@ struct HomeView: View {
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            List{
+                ForEach(workouts){ workout in
+                    NavigationLink(value: workout){
+                        HStack{
+                            // Emoji View
+                            
+                            Text(workout.name)
+                            
+                            Text("Muscle: \(workout.muscle)")
+                        }
+                    }
+                    
+                }
+            }
+        }
     }
 }
 
