@@ -32,7 +32,9 @@ struct OpeningView: View {
 
             if introViewVisible {
                 IntroView()
-            } 
+            } else {
+                HomeView()
+            }
             
         }
     }

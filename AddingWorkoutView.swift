@@ -44,7 +44,7 @@ struct AddingWorkout: View {
     }
     
     // muscles array for Picker
-    let muscles = ["Traps", "Shoulders", "Back", "Chest", "Biceps", "Triceps", "Abs", "Forearms", "Quads", "Hamstring", "Calves"]
+    let muscles = ["Traps", "Shoulders", "Back", "Chest", "Biceps", "Triceps", "Abs", "Forearms", "Quads", "Hamstring", "Calves", "Glutes"]
     
     var body: some View {
         NavigationStack{

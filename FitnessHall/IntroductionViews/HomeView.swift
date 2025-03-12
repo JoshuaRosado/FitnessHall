@@ -16,6 +16,7 @@ struct HomeView: View {
 
     @Query(sort: \Workout.rating, order: .reverse )var workouts: [Workout]
     
+    @State private var showingAddScreen = false
     
     var body: some View {
         NavigationStack{
@@ -23,7 +24,7 @@ struct HomeView: View {
                 ForEach(workouts){ workout in
                     NavigationLink(value: workout){
                         HStack{
-                            // Emoji View
+                            EmojiRatingView(rating: workout.rating)
                             
                             Text(workout.name)
                             
@@ -33,6 +34,35 @@ struct HomeView: View {
                     
                 }
             }
+            .navigationTitle("FitnessHall")
+            .navigationDestination(for: Workout.self){ workout in
+                
+                DetailView(workout:workout)
+            }
+            .toolbar{
+                
+                ToolbarItem(placement:.topBarLeading){
+                    EditButton()
+                }
+                
+                ToolbarItem(placement:.topBarTrailing){
+                    Button("Add Workout", systemImage: "plus"){
+                        showingAddScreen.toggle()
+                    }
+                }
+            }
+            .sheet(isPresented:$showingAddScreen){
+                AddingWorkout()
+            }
+        }
+    }
+    func removeWorkout(at offsets: IndexSet){
+        for offset in offsets {
+            // find workout in our query
+            let workout = workouts[offset]
+            // delete workout from our model
+            modelContext.delete(workout)
+            
         }
     }
 }
