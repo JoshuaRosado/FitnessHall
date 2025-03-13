@@ -33,6 +33,7 @@ struct HomeView: View {
                     }
                     
                 }
+                .onDelete(perform: removeWorkout)
             }
             .navigationTitle("FitnessHall")
             .navigationDestination(for: Workout.self){ workout in

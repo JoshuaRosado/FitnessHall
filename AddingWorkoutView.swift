@@ -15,7 +15,7 @@ extension String {
 
 struct AddingWorkout: View {
     @Environment(\.modelContext) var modelContext
-//    @Query(sort: \Workout.rating, order: .reverse) var workouts: [Workout]
+    @Query(sort: \Workout.rating, order: .reverse) var workouts: [Workout]
     
     @Environment(\.dismiss) var dismiss
     
@@ -54,13 +54,14 @@ struct AddingWorkout: View {
                     TextField("Workout name", text: $name)
                     TextField("How many sets", value: $sets, formatter: numberFormatter)
                         .keyboardType(.numbersAndPunctuation)
+                    
                     TextField("How many repetitions", value:$reps,  formatter: numberFormatter)
                         .keyboardType(.numbersAndPunctuation)
                     
                     Picker("Muscle", selection: $muscle){
                         
                         if muscle == "Placeholder"{
-                            Text("Select ...").tag("Placerholder")
+                            Text("Select ...").tag("Placeholder")
                         }
                         ForEach(muscles, id: \.self){
                             Text($0)
@@ -72,7 +73,7 @@ struct AddingWorkout: View {
                 
                 Section("Share your experience"){
                     TextEditor(text: $review)
-                    // Rating View
+                    RatingView(rating: $rating)
                 }
                 
                 Section{
@@ -84,6 +85,7 @@ struct AddingWorkout: View {
                         modelContext.insert(newWorkout)
                         // dismiss view after sharing new workout
                         dismiss()
+                        print(newWorkout.name)
                     }
                     
                 }
@@ -97,6 +99,6 @@ struct AddingWorkout: View {
     }
 }
 
-#Preview {
-    AddingWorkout()
-}
+//#Preview {
+//    AddingWorkout()
+//}
