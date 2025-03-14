@@ -5,10 +5,13 @@
 //  Created by Joshua Rosado Olivencia on 3/8/25.
 //
 
-
+import SwiftData
 import SwiftUI
 
 struct OpeningView: View {
+    
+    
+    
     @State private var introViewVisible = true
     @State private var timeRemaining = 5
     // Timer for IntroView to appear for = timeRemaining

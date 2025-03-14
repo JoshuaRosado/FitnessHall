@@ -4,7 +4,7 @@
 //
 //  Created by Joshua Rosado Olivencia on 3/7/25.
 //
-
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +13,6 @@ struct FitnessHallApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Workout.self)
     }
 }

@@ -56,6 +56,7 @@ struct HomeView: View {
                 AddingWorkout()
             }
         }
+        
     }
     func removeWorkout(at offsets: IndexSet){
         for offset in offsets {

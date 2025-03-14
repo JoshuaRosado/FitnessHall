@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
     
+    
     @Environment(\.modelContext) var modelContext
+    
     @Environment(\.dismiss) var dismiss
     
     let workout: Workout
