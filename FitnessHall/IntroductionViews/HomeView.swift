@@ -23,13 +23,33 @@ struct HomeView: View {
             List{
                 ForEach(workouts){ workout in
                     NavigationLink(value: workout){
-                        HStack{
-                            EmojiRatingView(rating: workout.rating)
+                        HStack(spacing: 100){
+                            ZStack{
+                                
+                                Circle()
+                                    .fill(.gray.opacity(0.2))
+                                    .shadow(color: .black.opacity(0.5), radius: 10, x: 15, y: 15)
+                                
+                                    .frame(width: 50)
+                                
+                                EmojiRatingView(rating: workout.rating)
+                                
+                            }
                             
-                            Text(workout.name)
                             
-                            Text("Muscle: \(workout.muscle)")
+          
+                            VStack{
+                                Text(workout.muscle)
+                                    .fontWeight(.black)
+                                
+                                Text(workout.name)
+                            }
+                            
+                            
                         }
+                        
+                        
+                        
                     }
                     
                 }
