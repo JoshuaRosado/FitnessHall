@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A28134DB2D80C9BF00DBF449 /* AddingWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */; };
-		A28134E12D81FA7000DBF449 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28134E02D81FA7000DBF449 /* DetailView.swift */; };
 		A2A416752D83754D00FFC827 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A416742D83754D00FFC827 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		A26C4FAF2D7B766200D25529 /* FitnessHallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessHallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C4FB92D7B766200D25529 /* FitnessHallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessHallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWorkoutView.swift; sourceTree = "<group>"; };
-		A28134E02D81FA7000DBF449 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A2A416742D83754D00FFC827 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +82,6 @@
 		A26C4F962D7B765F00D25529 = {
 			isa = PBXGroup;
 			children = (
-				A28134E02D81FA7000DBF449 /* DetailView.swift */,
 				A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */,
 				A2A416742D83754D00FFC827 /* RatingView.swift */,
 				A26C4FA12D7B765F00D25529 /* FitnessHall */,
@@ -248,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A28134E12D81FA7000DBF449 /* DetailView.swift in Sources */,
 				A28134DB2D80C9BF00DBF449 /* AddingWorkoutView.swift in Sources */,
 				A2A416752D83754D00FFC827 /* RatingView.swift in Sources */,
 			);

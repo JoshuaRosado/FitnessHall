@@ -7,6 +7,9 @@
 import SwiftData
 import SwiftUI
 
+
+
+
 struct DetailView: View {
     
     
@@ -21,9 +24,8 @@ struct DetailView: View {
             VStack{
                 ZStack(alignment: .bottomTrailing){
                     ZStack{
-                        Rectangle()
+                        RoundedRectangle(cornerRadius: 25)
                             .fill(.space.opacity(0.8))
-                            .background(.thinMaterial)
                             .shadow(color: .black.opacity(0.2), radius: 2, x: 3, y: 3)
                         
                         Text(workout.name)
@@ -32,17 +34,24 @@ struct DetailView: View {
                             .fontWeight(.bold)
                             .foregroundStyle(.white)
                     }
-                    .frame(height: 150)
+                    
+                    .frame(height: 200)
                     
                     Text(workout.muscle)
                         .fontWeight(.black)
                         .padding(8)
                         .background(.ultraThinMaterial)
                         .clipShape(.capsule)
-                        
-                        
+                        .offset(x: -5 , y: -5)
+    
+                }
+                
+                VStack{
+                    
                     
                 }
+                
+                
                     
                     
                 
