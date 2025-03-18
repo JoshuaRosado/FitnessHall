@@ -15,8 +15,8 @@ struct IntDisplayView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20), style: .circular).fill(color)
-                .frame(width: 200, height: 200)
-                .shadow(color: .gray.opacity(0.4), radius: 10, x: 10, y: 10)
+                .frame(width: 170, height: 170)
+                .shadow(color: .gray.opacity(0.4), radius: 5, x: 10, y: 10)
             
             VStack{
             

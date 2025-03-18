@@ -25,39 +25,42 @@ struct DetailView: View {
                 ZStack(alignment: .bottomTrailing){
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
-                            .fill(.space.opacity(0.8))
-                            .shadow(color: .black.opacity(0.2), radius: 2, x: 3, y: 3)
+                            .fill(.white)
+                            .shadow(color: .gray.opacity(0.4), radius: 10, x: 10, y: 10)
+                        
                         
                         Text(workout.name)
-                            .font(.system(size: 40))
+                            .font(.system(size: 30))
                             .fontDesign(.rounded)
                             .fontWeight(.bold)
-                            .foregroundStyle(.white)
+                            
                     }
                     
-                    .frame(height: 200)
+                    .frame(height: 175)
                     
                     Text(workout.muscle)
                         .fontWeight(.black)
-                        .padding(8)
-                        .background(.ultraThinMaterial)
+                        .padding(10)
+                        .background(.thinMaterial)
                         .clipShape(.capsule)
-                        .offset(x: -5 , y: -5)
+                        .offset(x: -10 , y: -10)
+                        .foregroundStyle(.secondary) 
     
                 }
                 
-                VStack{
+                HStack{
+                    IntDisplayView(number: workout.reps, description: "Reps", color: .white)
+                    
+                    IntDisplayView(number: workout.sets, description: "Sets", color: .white)
                     
                     
                 }
-                
-                
-                    
-                    
-                
-                
+  
             }
+            
+            .padding(20)
         }
+        .background(Color.cream)
         
     }
 }
