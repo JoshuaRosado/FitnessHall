@@ -21,6 +21,7 @@ struct AddingWorkout: View {
     
     @State private var name = ""
     @State private var muscle = "Placeholder"
+    @State private var weight = 0
     @State private var sets = 0
     @State private var reps = 0
     @State private var review = ""
@@ -58,6 +59,9 @@ struct AddingWorkout: View {
                     TextField("How many repetitions", value:$reps,  formatter: numberFormatter)
                         .keyboardType(.numbersAndPunctuation)
                     
+                    TextField("How much weight", value: $weight, formatter: numberFormatter)
+                        .keyboardType(.numbersAndPunctuation)
+                    
                     Picker("Muscle", selection: $muscle){
                         
                         if muscle == "Placeholder"{
@@ -80,7 +84,7 @@ struct AddingWorkout: View {
                     
                     Button("Share") {
                         // new workout
-                        let newWorkout = Workout(name: name, muscle: muscle, sets: sets, reps: reps, review: review, date: date, rating: rating)
+                        let newWorkout = Workout(name: name, muscle: muscle, weight: weight, sets: sets, reps: reps, review: review, date: date, rating: rating)
                         // add New workout to model
                         modelContext.insert(newWorkout)
                         // dismiss view after sharing new workout

@@ -16,7 +16,7 @@ struct ShapeSectionView: View {
     var body: some View {
         RoundedRectangle(cornerSize: CGSize(width: 20, height: 20), style: .circular).fill(color)
             .frame(width: width, height:height)
-            .shadow(color: .gray.opacity(0.2), radius: 2, x: 5, y: 5)
+            .shadow(color: .gray.opacity(0.1), radius: 2, x: 4, y: 4)
     }
 }
 
