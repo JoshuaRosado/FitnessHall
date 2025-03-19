@@ -26,7 +26,7 @@ struct DetailView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
                             .fill(.white)
-                            .shadow(color: .gray.opacity(0.4), radius: 10, x: 10, y: 10)
+                            .shadow(color: .gray.opacity(0.2), radius: 2, x: 5, y: 5)
                         
                         
                         Text(workout.name)
@@ -42,14 +42,15 @@ struct DetailView: View {
                         .fontWeight(.black)
                         .padding(10)
                         .background(.thinMaterial)
-                        .clipShape(.capsule)
+                        .clipShape(.containerRelative)
                         .offset(x: -10 , y: -10)
                         .foregroundStyle(.secondary) 
     
                 }
                 
-                HStack{
+                HStack(spacing: 15){
                     IntDisplayView(number: workout.reps, description: "Reps", color: .white)
+                        
                     
                     IntDisplayView(number: workout.sets, description: "Sets", color: .white)
                     
@@ -57,8 +58,8 @@ struct DetailView: View {
                 }
   
             }
-            
-            .padding(20)
+            .padding(.vertical, 20)
+            .padding(.horizontal, 40)
         }
         .background(Color.cream)
         
