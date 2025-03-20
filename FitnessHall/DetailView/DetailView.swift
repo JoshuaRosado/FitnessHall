@@ -45,25 +45,67 @@ struct DetailView: View {
                         .background(.thinMaterial)
                         .clipShape(.capsule(style: .continuous))
                         .offset(x: -10 , y: -10)
-                        .foregroundStyle(.secondary) 
+                        .foregroundStyle(.secondary)
     
                 }
                 
-                // Reps and Sets Row
-                HStack(spacing: 15){
-                    IntDisplayView(number: workout.reps, description: "Reps", color: .white)
-                        
+                // Weight and muscle image row
+                HStack{
+                    IntDisplayView(number: workout.weight, description: "Lbs", color: .white)
                     
+                    ZStack{
+                        ShapeSectionView(width: 170, height: 170, color: .white)
+                        
+                        Image(workout.muscle)
+                            .resizable()
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                    }
+                }
+                
+                
+                
+                
+                // Sets and Reps Row
+                HStack(spacing: 15){
                     IntDisplayView(number: workout.sets, description: "Sets", color: .white)
+                    
+                    IntDisplayView(number: workout.reps, description: "Reps", color: .white)
                     
                     
                 }
+                
                 
                 // Rating Row
                 ZStack{
                     ShapeSectionView(width: 350, height: 100, color: .white)
-                    RatingView(rating: .constant (workout.rating))
-                        .font(.largeTitle)
+                    VStack{
+                        RatingView(rating: .constant (workout.rating))
+                            .font(.largeTitle)
+                            .padding(.bottom, 20)
+                        Text("\(workout.rating) out of 5")
+                        
+                    }
+                }
+                
+                // Review Row
+                ZStack{
+                    ShapeSectionView(width: 350 , height: 200, color: .white)
+                    VStack{
+                        Text("Review")
+                            .padding(.top, -30)
+                            .foregroundStyle(.secondary)
+                            
+                        
+                        
+                        Text(workout.review)
+                            .padding()
+                    }
+                }
+                ZStack{
+                    ShapeSectionView(width: 350 , height: 25, color: .white)
+                    Text(workout.date, format: .dateTime.month().day().hour().minute())
+                        .foregroundStyle(.secondary)
                 }
             }
             .padding(.vertical, 20)
