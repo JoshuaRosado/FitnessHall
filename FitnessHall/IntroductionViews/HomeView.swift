@@ -23,7 +23,7 @@ struct HomeView: View {
             List{
                 ForEach(workouts){ workout in
                     NavigationLink(value: workout){
-                        HStack(spacing: 100){
+                        HStack(spacing: 50){
                             ZStack{
                                 
                                 Circle()
@@ -44,6 +44,8 @@ struct HomeView: View {
                                 
                                 Text(workout.name)
                             }
+                            .frame(minWidth:200, alignment: .center)
+                            .border(Color.red)
                             
                             
                         }
