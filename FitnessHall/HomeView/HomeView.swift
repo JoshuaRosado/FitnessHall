@@ -20,43 +20,57 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack{
-            List{
-                ForEach(workouts){ workout in
-                    NavigationLink(value: workout){
-                        HStack(spacing: 50){
-                            ZStack{
+            ZStack{
+                Color.cream.ignoresSafeArea()
+                
+                
+                List{
+                    ForEach(workouts){ workout in
+                        NavigationLink(value: workout){
+                            HStack(spacing: 50){
+                                ZStack{
+                                    
+                                    Circle()
+                                        .fill(.gray.opacity(0.2))
+                                        .shadow(color: .black.opacity(0.5), radius: 10, x: 15, y: 15)
+                                    
+                                        .frame(width: 50)
+                                    
+                                    EmojiRatingView(rating: workout.rating)
+                                    
+                                }
                                 
-                                Circle()
-                                    .fill(.gray.opacity(0.2))
-                                    .shadow(color: .black.opacity(0.5), radius: 10, x: 15, y: 15)
                                 
-                                    .frame(width: 50)
                                 
-                                EmojiRatingView(rating: workout.rating)
+                                VStack{
+                                    Text(workout.muscle)
+                                        .fontWeight(.black)
+                                    
+                                    Text(workout.name)
+                                }
+                                .frame(minWidth:200, alignment: .center)
                                 
                             }
                             
                             
-          
-                            VStack{
-                                Text(workout.muscle)
-                                    .fontWeight(.black)
-                                
-                                Text(workout.name)
-                            }
-                            .frame(minWidth:200, alignment: .center)
-                            .border(Color.red)
                             
                             
                         }
                         
                         
                         
+                        
+                        
+                        
                     }
                     
-                }
-                .onDelete(perform: removeWorkout)
+                    .onDelete(perform: removeWorkout)
+                                    }
+                .scrollContentBackground(.hidden)
+                
             }
+            
+            
             .navigationTitle("FitnessHall")
             .navigationDestination(for: Workout.self){ workout in
                 
@@ -78,6 +92,8 @@ struct HomeView: View {
                 AddingWorkout()
             }
         }
+        .scrollContentBackground(.hidden)
+
         
     }
     func removeWorkout(at offsets: IndexSet){

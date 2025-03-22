@@ -6,12 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A28134DB2D80C9BF00DBF449 /* AddingWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */; };
-		A2A416752D83754D00FFC827 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A416742D83754D00FFC827 /* RatingView.swift */; };
-		A2AF8DC42D8B562D0083CA4A /* ShapeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AF8DC32D8B562D0083CA4A /* ShapeSectionView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		A26C4FB02D7B766200D25529 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -33,9 +27,6 @@
 		A26C4F9F2D7B765F00D25529 /* FitnessHall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessHall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C4FAF2D7B766200D25529 /* FitnessHallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessHallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C4FB92D7B766200D25529 /* FitnessHallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessHallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWorkoutView.swift; sourceTree = "<group>"; };
-		A2A416742D83754D00FFC827 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		A2AF8DC32D8B562D0083CA4A /* ShapeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,9 +75,6 @@
 		A26C4F962D7B765F00D25529 = {
 			isa = PBXGroup;
 			children = (
-				A2AF8DC32D8B562D0083CA4A /* ShapeSectionView.swift */,
-				A28134DA2D80C9BE00DBF449 /* AddingWorkoutView.swift */,
-				A2A416742D83754D00FFC827 /* RatingView.swift */,
 				A26C4FA12D7B765F00D25529 /* FitnessHall */,
 				A26C4FB22D7B766200D25529 /* FitnessHallTests */,
 				A26C4FBC2D7B766200D25529 /* FitnessHallUITests */,
@@ -248,9 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A28134DB2D80C9BF00DBF449 /* AddingWorkoutView.swift in Sources */,
-				A2A416752D83754D00FFC827 /* RatingView.swift in Sources */,
-				A2AF8DC42D8B562D0083CA4A /* ShapeSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
